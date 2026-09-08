@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Dark brown linear gradient background -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1510" />
+      <stop offset="100%" stop-color="#0f0a07" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c0916a" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#c0916a" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg-grad)" />
+  
+  <!-- Subtle background grid -->
+  <path d="M 0,50 L 800,50 M 0,100 L 800,100 M 0,150 L 800,150 M 0,200 L 800,200 M 0,250 L 800,250 M 0,300 L 800,300 M 0,350 L 800,350 M 0,400 L 800,400 M 0,450 L 800,450" stroke="#c0916a" stroke-opacity="0.05" stroke-width="1" />
+  <path d="M 100,0 L 100,500 M 200,0 L 200,500 M 300,0 L 300,500 M 400,0 L 400,500 M 500,0 L 500,500 M 600,0 L 600,500 M 700,0 L 700,500" stroke="#c0916a" stroke-opacity="0.05" stroke-width="1" />
+
+  <!-- Ambient Glow in center -->
+  <circle cx="400" cy="250" r="280" fill="url(#glow)" />
+
+  <!-- Abstract UI Elements (DailyDish Food Platform Mockup) -->
+  <rect x="80" y="80" width="640" height="340" rx="12" fill="#140e0c" fill-opacity="0.8" stroke="#c0916a" stroke-opacity="0.2" stroke-width="1.5" />
+  
+  <!-- UI Header -->
+  <rect x="80" y="80" width="640" height="50" rx="12" fill="#1e1510" fill-opacity="0.9" />
+  <circle cx="110" cy="105" r="6" fill="#ef4444" fill-opacity="0.7" />
+  <circle cx="130" cy="105" r="6" fill="#eab308" fill-opacity="0.7" />
+  <circle cx="150" cy="105" r="6" fill="#22c55e" fill-opacity="0.7" />
+  <text x="400" y="112" font-family="'Outfit', sans-serif" font-size="14" fill="#faf7f2" fill-opacity="0.6" font-weight="500" text-anchor="middle">DAILYDISH MARKETPLACE</text>
+
+  <!-- Featured Dish Card Mockup (Left) -->
+  <rect x="110" y="150" width="280" height="240" rx="8" fill="#1e1510" fill-opacity="0.6" stroke="#c0916a" stroke-opacity="0.1" />
+  <!-- Gourmet Plate Sketch -->
+  <circle cx="250" cy="235" r="55" fill="none" stroke="#261b14" stroke-width="4" />
+  <circle cx="250" cy="235" r="35" fill="none" stroke="#c0916a" stroke-opacity="0.3" stroke-width="2" />
+  <!-- Cutlery icons simplified -->
+  <path d="M 175,210 L 175,260 M 172,210 L 178,210" stroke="#c0916a" stroke-width="2" stroke-linecap="round" />
+  <path d="M 325,210 L 325,260 M 321,210 C 321,230 329,230 329,210" stroke="#c0916a" fill="none" stroke-width="2" stroke-linecap="round" />
+  
+  <text x="250" y="325" font-family="'Outfit', sans-serif" font-size="16" fill="#faf7f2" font-weight="600" text-anchor="middle">Premium Home Cooking</text>
+  <text x="250" y="348" font-family="'Outfit', sans-serif" font-size="12" fill="#c0916a" font-weight="500" text-anchor="middle">AI Meal Recommender Active</text>
+
+  <!-- Right Order Details -->
+  <rect x="415" y="150" width="275" height="240" rx="8" fill="#1e1510" fill-opacity="0.4" stroke="#c0916a" stroke-opacity="0.1" />
+  
+  <text x="435" y="190" font-family="'Outfit', sans-serif" font-size="13" fill="#c0916a" font-weight="600" letter-spacing="1">WEEKLY PLANNER</text>
+  
+  <line x1="435" y1="215" x2="650" y2="215" stroke="#261b14" stroke-width="2" />
+  <text x="435" y="240" font-family="'Outfit', sans-serif" font-size="13" fill="#faf7f2">Mon: Baked Salmon &amp; Veggies</text>
+  
+  <line x1="435" y1="265" x2="650" y2="265" stroke="#261b14" stroke-width="2" />
+  <text x="435" y="290" font-family="'Outfit', sans-serif" font-size="13" fill="#faf7f2">Tue: Organic Lentil Quinoa bowl</text>
+
+  <line x1="435" y1="315" x2="650" y2="315" stroke="#261b14" stroke-width="2" />
+  <text x="435" y="340" font-family="'Outfit', sans-serif" font-size="13" fill="#faf7f2">Wed: Honey Mustard Chicken</text>
+  
+  <line x1="435" y1="365" x2="650" y2="365" stroke="#261b14" stroke-width="2" />
+</svg>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Host & Sitemap definition
+Host: https://shafim.vercel.app
+Sitemap: https://shafim.vercel.app/sitemap.xml
