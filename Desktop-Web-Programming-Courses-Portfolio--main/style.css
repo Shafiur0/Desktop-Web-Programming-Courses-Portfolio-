@@ -1365,33 +1365,85 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   14. RESPONSIVE DESIGN MEDIA QUERIES (DESKTOP, TABLET, MOBILE)
+   14. COMPREHENSIVE RESPONSIVE DESIGN MEDIA QUERIES
+       (Ultra-Wide PC, Laptop, iPad/Tablet, Mobile, Tiny Phones)
    -------------------------------------------------------------------------- */
 
-/* TABLET AND LARGE PORTRAIT DEVICES (Max-width: 1024px) */
-@media screen and (max-width: 1024px) {
-  .hero-section {
-    background-position: right 20% center; /* Adjust image crop window */
+/* ULTRA-WIDE PC MONITORS & 4K DISPLAYS (Min-width: 1440px) */
+@media screen and (min-width: 1440px) {
+  :root {
+    --max-width: 1320px;
   }
   
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .hero-text-content {
+    max-width: 680px;
   }
   
-  .achievement-card {
-    grid-template-columns: 260px 1fr;
+  .first-name {
+    font-size: 5.8rem;
   }
   
-  .about-grid {
-    gap: 40px;
+  .signature-name {
+    font-size: 5.2rem;
   }
 }
 
-/* NAVIGATION BREAKPOINT FOR TABLETS & MOBILE (Max-width: 1024px) */
+/* LAPTOPS & DESKTOPS (1025px to 1439px) */
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  
+  .about-grid {
+    gap: 48px;
+  }
+}
+
+/* TABLETS LANDSCAPE & IPAD PRO (840px to 1024px) */
 @media screen and (max-width: 1024px) {
-  /* Navigation Hamburger Toggle Layout */
+  .container {
+    padding: 0 24px;
+  }
+
+  .hero-section {
+    padding-top: 100px;
+  }
+
+  .hero-image-container {
+    width: 60%;
+    opacity: 0.85;
+  }
+
+  .hero-text-content {
+    max-width: 540px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .achievement-card {
+    grid-template-columns: 240px 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Hamburger Navigation for Tablets & Mobile */
   .mobile-nav-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
     z-index: 1100;
   }
   
@@ -1399,14 +1451,17 @@ img {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: 300px;
+    max-width: 85vw;
     height: 100vh;
     background-color: var(--color-bg-dark);
-    border-left: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border-strong);
     padding: 100px 30px 40px;
     transition: var(--transition-smooth);
     z-index: 1050;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.7);
+    flex-direction: column;
+    justify-content: flex-start;
   }
   
   .nav-menu.open {
@@ -1415,34 +1470,38 @@ img {
   
   .nav-list {
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
+    width: 100%;
   }
   
   .nav-link {
-    font-size: 1.1rem;
-    padding: 8px 0;
+    font-size: 1.05rem;
+    padding: 12px 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(192, 145, 106, 0.08);
   }
   
   .nav-link::after {
-    display: none; /* Hide dots on mobile */
+    display: none;
   }
   
   .btn-nav-connect {
-    display: none; /* Hide connect button inside header on mobile */
+    display: none;
   }
 }
 
-/* MOBILE AND SMALL TABLET PORTRAIT (Max-width: 768px) */
-@media screen and (max-width: 768px) {
-  /* Responsive Hero Section Setup for Mobile */
-  .hero-section {
-    display: block;
-    min-height: 100vh;
-    position: relative;
-    padding-bottom: 60px;
-    padding-top: 120px;
+/* TABLETS PORTRAIT & SMALL TABLETS (600px to 839px) */
+@media screen and (max-width: 839px) {
+  .section {
+    padding: 80px 0;
   }
-  
+
+  .hero-section {
+    min-height: auto;
+    padding-top: 130px;
+    padding-bottom: 80px;
+  }
+
   .hero-image-container {
     position: absolute;
     top: 0;
@@ -1450,35 +1509,30 @@ img {
     width: 100%;
     height: 100%;
     z-index: 1;
-    display: block; /* reset flex layout from desktop */
   }
 
   .hero-portrait-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 10%;
-    /* Smoothly fade the bottom of the portrait into the dark background on mobile */
-    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 35%);
-    mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 35%);
+    object-position: center 15%;
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%);
+    mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%);
   }
-  
+
   .hero-bg-overlay {
-    /* Full dark screen filter overlay for image background readability */
-    position: absolute;
-    inset: 0;
     background: linear-gradient(
       to top,
       #160f0b 0%,
-      rgba(22, 15, 11, 0.85) 50%,
-      rgba(22, 15, 11, 0.4) 100%
+      rgba(22, 15, 11, 0.9) 55%,
+      rgba(22, 15, 11, 0.5) 100%
     );
-    z-index: 2;
   }
-  
+
   .hero-text-content {
     text-align: center;
     max-width: 100%;
+    margin: 0 auto;
   }
 
   .signature-name {
@@ -1490,6 +1544,11 @@ img {
   .hero-divider {
     margin: 20px auto;
   }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
   
   .hero-ctas {
     justify-content: center;
@@ -1500,70 +1559,131 @@ img {
     margin-top: 24px;
   }
 
-  /* Two Column Layouts Stacking to Single Columns */
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 48px;
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .achievement-card {
     grid-template-columns: 1fr;
   }
-  
+
   .achievement-image-box {
-    height: 220px;
+    height: 240px;
     border-right: none;
     border-bottom: 1px solid var(--color-border);
   }
-  
+
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* SMARTPHONES AND VERY SMALL VIEWPORTS (Max-width: 480px) */
-@media screen and (max-width: 480px) {
+/* SMARTPHONES & MOBILE PHONES (360px to 599px) */
+@media screen and (max-width: 599px) {
   .section {
-    padding: 60px 0;
+    padding: 64px 0;
   }
-  
-  .hero-section {
-    padding-bottom: 40px;
+
+  .container {
+    padding: 0 18px;
   }
 
   .first-name {
-    font-size: 2.8rem;
+    font-size: clamp(2.6rem, 9vw, 3.8rem);
+    letter-spacing: 0.03em;
   }
 
   .signature-name {
-    font-size: 2.8rem;
+    font-size: clamp(2.4rem, 8vw, 3.5rem);
     margin-top: -18px;
   }
-  
+
+  .hero-badge-title {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-subtitle {
+    font-size: 0.78rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
   .hero-ctas {
     flex-direction: column;
     gap: 12px;
     width: 100%;
   }
-  
+
   .hero-ctas .btn {
     width: 100%;
+    padding: 14px 20px;
   }
-  
+
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
-  
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .stats-card {
+    padding: 18px 12px;
+  }
+
+  .stats-number {
+    font-size: 1.8rem;
+  }
+
+  .stats-label {
+    font-size: 0.75rem;
+  }
+
+  .contact-form-card {
+    padding: 24px 18px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 14px 14px;
+    font-size: 0.95rem;
+  }
+
+  .main-footer {
+    padding: 40px 0;
+  }
+}
+
+/* TINY PHONES & VERY NARROW VIEWPORTS (Below 360px) */
+@media screen and (max-width: 359px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .first-name {
+    font-size: 2.2rem;
+  }
+
+  .signature-name {
+    font-size: 2.2rem;
+    margin-top: -14px;
+  }
+
   .stats-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-form-card {
-    padding: 24px 16px;
+    padding: 20px 14px;
   }
 }
